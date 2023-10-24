@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUUK</title>
+</head>
+
+
+<style>
+    *{
+      box-sizing:border-box;
+      scroll-behavior: smooth;
+    }
+
+    .main-img{
+        margin: 30px 15px 0px 30px;
+    }
+    #main{
+        width: 100%;
+        z-index: -5;
+    }
+    .header-container{
+        position: absolute; 
+        top: 115%;
+        left: 33.8%;
+        margin-bottom: 50px;
+        background-color: rgb(226, 95, 43);
+        background-image: linear-gradient(to top right, rgb(224, 75, 99),rgb(255, 153, 0));
+        width: 65%;
+       
+    }
+    .header-section{
+        display: flex;
+        justify-content:center;
+        justify-content:space-between;
+        /* flex-wrap: wrap; */
+        color: white;
+        padding:40px 90px 40px 190px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #icons-2{
+        width: 30px;
+        height: 50px;
+        margin-left: 40px;
+        justify-content: center;
+       
+       
+    }
+    #header-content-details{
+       justify-content: center;
+       
+    }
+    #head-details{
+        margin-left: 20px;
+    }
+    .heading{
+        margin: 0px 0px 0px 100px;
+    }
+    .blog-text{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 65px;
+        letter-spacing: 15px;
+        color: rgb(90, 90, 90);
+        opacity: 0.05;
+       
+    }
+    #transparent-text{
+        margin-bottom: 0%;
+        position: relative;
+    }
+    #sub-text{
+        position: absolute;
+        top: 150.8%;
+        left: 9%;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+        letter-spacing: 3px;
+        font-size: 48px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .service-button{
+        position: absolute;
+        top: 150.8%;
+        left:80%;
+        margin-right: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: rgb(134, 134, 134); 
+       
+    }
+    .service-button:hover{
+        padding-bottom: 5px;
+        border-bottom:3px solid rgb(245, 151, 11);
+    }
+    
+    .service-icon-container{
+        padding: 70px 350px 50px 160px;
+        
+        
+    }
+
+    .service-section{
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    #service-icons{
+        width: 100px;
+        height: 80px;
+        
+    }
+    #icon-heading{
+        font-size: larger;
+    }
+    .icons-para{
+      color:  rgb(170, 170, 170);
+      padding-top: 5px;
+      font-size: medium;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 30px;
+    }
+    .icon-button{
+        color:  rgb(148, 148, 148); 
+        
+    }
+    .icon-button:hover{
+        padding-bottom: 5px;
+        border-bottom:3px solid rgb(245, 151, 11);
+    }
+   
+    #about-img{
+        width: 680px;
+        height: 500px;
+      
+    }
+    .about-section{
+        padding: 100px 190px 0px 160px;
+    }
+    #about-transparent-text{
+        position:absolute;
+        left: 52%;
+        top: 194%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 160px;
+        letter-spacing: 15px;
+        color: rgb(90, 90, 90);
+        opacity: 0.05;
+    }
+    #about-sub-text{
+        position: absolute;
+        top: 216.4%;
+        left: 56.8%;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+        letter-spacing: 3px;
+        font-size: 48px;
+    }
+    #about-para{
+      position: absolute;
+      top: 224.5%;
+      left: 55.8%;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color:  rgb(170, 170, 170);
+      padding-top: 5px;
+      font-size: larger;
+      line-height: 30px;
+    }
+    #about-para-2{
+      position: absolute;
+      top: 236%;
+      left: 55.8%;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color:  rgb(170, 170, 170);
+      padding-top: 5px;
+      font-size: larger;
+      line-height: 30px;
+    }
+    .about-button{
+      position: absolute;
+      top: 258%;
+      left: 55.8%;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color:  rgb(170, 170, 170);
+      padding-top: 5px;
+      font-size: medium;
+      line-height: 30px;
+    }
+    .about-button:hover{
+        padding-bottom: 1px;
+        border-bottom:3px solid rgb(245, 151, 11);
+    }
+    .number-container{
+        padding: 70px 400px 50px 170px;
+        color:  rgb(231, 128, 10);
+    }
+    .number-section{
+        display: flex;
+        justify-content: space-between;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size:xx-large;
+    }
+    .number-para{
+        font-size: 22px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color:rgb(170, 170, 170) ;
+    }
+    .project-main-container{
+        background-color: rgba(236, 236, 236, 0.342);
+        margin: 30px 15px 30px 30px;
+      
+    }
+    .project-text{
+        padding-top: 10px;
+        padding-bottom: 110px;
+    }
+    #project-sub-text{
+        position: absolute;
+        top: 334%;
+        left: 10.5%;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+        letter-spacing: 3px;
+        font-size: 48px;
+    }
+    .works-button{
+        position: absolute;
+        top: 334%;
+        left:85%;
+        margin-right: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: rgb(134, 134, 134); 
+    }
+    .works-button:hover{
+        padding-bottom: 5px;
+        border-bottom:3px solid rgb(245, 151, 11);
+    }
+    .project-img-section{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        padding: 0PX 40px 40px 40px;
+        justify-content: space-between;
+        grid-row-gap: 40px;
+        grid-column-gap: 40px;
+    
+
+    }
+    .project-img{
+        
+        width: 545px;
+        height: 600px;
+    }
+    .view-project-button{
+        width: 80px;
+        height: 80px;
+        border-radius: 50px;
+        border:0 ;
+        color: white;
+        background-color: rgb(226, 95, 43);
+        background-image: linear-gradient(to top right, rgb(224, 75, 99),rgb(255, 153, 0));
+      
+    }
+    #project-img-container{
+        position: relative;
+    }
+    #project-button-container{
+        position:absolute;
+        left: 17%;
+        top: 382%;
+       
+    }
+    .project-transparent-container{
+        background-color: rgb(226, 95, 43);
+        background-image: linear-gradient(to right, rgb(255, 153, 0),rgb(224, 75, 99));
+    }
+    .project-transparent-section{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        padding: 80px 0px 230px 0px;
+        text-align: justify;
+    }
+    #transparent-main-text{
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 55px;
+        margin-bottom: 0%;
+    }
+    #transparent-sub-text{
+        display: flex;
+        justify-content: center;
+        color:rgba(214, 212, 212, 0.822);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: x-large;
+        padding-top: 0%;
+    }
+    .transparent-button{
+        position: absolute;
+        left: 50%;
+        color:rgb(255, 253, 253);
+        padding-top: 50px;
+        font-size: larger;
+        left: 47%;
+        top: 520%;
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .transparent-button:hover{
+        padding-bottom: 5px;
+        border-bottom:3.8px solid rgb(255, 255, 255);
+    }
+    #team-sub-text{
+        position: absolute;
+        top: 561%;
+        left: 11%;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+        letter-spacing: 3px;
+        font-size: 48px;
+    }
+    .team-button{
+        position: absolute;
+        top: 561%;
+        left:85%;
+        margin-right: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        letter-spacing: 1px;
+        font-size: large;
+        text-decoration: none;
+        color: rgb(134, 134, 134); 
+    }
+    .team-button:hover{
+        padding-bottom: 5px;
+        border-bottom:3px solid rgb(245, 151, 11);
+    }
+    .team-img-container{
+        padding: 70px 150px 50px 150px;
+    }
+    .team-img-section{
+        display: flex;
+        justify-content: center;
+        text-align:left;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #team-img{
+        width: 350px;
+        height: 380px;
+    }
+    #team-name{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding-left: 30px;
+
+
+    }
+    #team-position{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding-left: 30px;
+        font-size: larger;
+        color: rgb(202, 200, 200); 
+    }
+    #team-img-background{
+        width: 350px;
+        height: 528px;
+        background-color: white;
+    }
+    .logo-container{
+        background-color: rgb(226, 95, 43);
+        background-image: linear-gradient(to right, rgb(255, 153, 0),rgb(224, 75, 99));
+        margin: 0px 15px 0px 30px;
+    }
+
+
+    .logo-section{
+        display: inline-block;
+        display: flex;
+        padding:80px 275px 80px 275px ;
+        justify-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: larger;
+        color: white;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif        
+    }
+    #logo-list{
+        font-size: small;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-top: 8px;
+    }
+    .logo{
+        cursor: pointer;
+        font-size: larger;
+    }
+    .footer-container{
+        background-color: rgb(1, 12, 43);
+        color: white;
+        margin: 0px 100px 0px 100px;
+        height: 550px;
+    }
+    .footer-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding:50px 200px 80px 200px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      
+    }
+    .line{
+        background-color: rgb(226, 95, 43);
+        background-image: linear-gradient(to right, rgb(255, 153, 0),rgb(224, 75, 99));
+        /* color: rgb(255, 153, 0); */
+        height: 2px;
+        border: 0;
+        margin-left: 10px;
+        width: 250px;
+        margin-bottom: 5px;
+    }
+    .box{
+      background-color:  rgb(255, 136, 0);
+      width:100PX ;
+      height: 70px;
+      color: white;
+      border: 0;
+      font-size: larger;
+      cursor: pointer;
+      letter-spacing: 2px;
+    }
+    #icons{
+        width: 20px;
+        height: 50px;
+    }
+    .contents{
+        padding-top: 20px;
+    }
+    #contact-details{
+        display:inline-flex;  
+    }
+    #sub{
+        padding-top: 15px;
+        padding-left: 10px;
+    }
+    #sub-2{
+        padding-left: 30px;
+    }
+   
+   .selection-hover:hover{
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        padding-bottom: 5px;
+        border-bottom: 2px solid white;
+    }
+    
+    
+</style>
+<body>
+<!-- Header starts here -->
+<header>
+    <div class="main-img col-1 col-s-1" ><img id="main" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/slide-2.jpg" alt="img"> </div>
+    <div class="header-container">
+        <div class="header-section">
+           <div id="team-background-image"> <DIV> <div id="img-container"><img id="icons-2" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/phone.svg"></div><br><b id="header-content-details">PHONE NUMBER</b>
+                <p ID="sub-details">1-800-506-266</p><p id="sub-details">1-100-777-800</p></DIV></div>
+            <div> <div id="img-container"><img id="icons-2" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/mail.svg"></div><br><b id="head-details">CONTACT</b><P id="sub-details">contact@nuuk.com</P>
+            <P id="sub-details">info@nuuk.com</P></div>
+            <div> <div id="img-container"><img id="icons-2" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/clock.svg"></div><br><b id="header-content-details">OPENING TIMES</b>
+             <P id="sub-details">Mon - Sat 8:00 - 17:30, Sunday - Closed</P> <br><B class=" find-map selection-hover">FIND ON MAP</B></div>
+             
+        </div>
+    </div>
+</header>
+<br>
+<br>
+<!-- Main starts here -->
+  <div class="service-heading col-2 col-s-2">
+    <DIV class="heading">
+        <div class="blog-text">
+        <h1 id="transparent-text">SERVICES</h1></div><B id="sub-text">OUR SPECIALIZATION</B> <a href="#"><B class="service-button">VIEW ALL SERVICES</B></a>
+    </DIV>
+  </div>
+    <BR>
+        <!-- specialization content starts here -->
+        <div class="service-icon-container col-3 col-s-3">
+            <div class="service-section">
+                <div><img id="service-icons" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/brickwall.svg"> <br><br> <b id="icon-heading">RENOVATION</b><BR>
+                    <p class="icons-para">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Suspendisse varius enim in <br> eros elementum tristique.</p><br> 
+                     <a href="#"><B class="icon-button">LEARN MORE</B></a></div>
+                <div><img id="service-icons" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/set-square.svg"><br><br> <b id="icon-heading">ARCHITECTURE</b> <br>
+                    <p class="icons-para">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Suspendisse varius enim in <br> eros elementum tristique.</p><br>
+                     <a href="#"><B class="icon-button">LEARN MORE</B></a></div>
+                <div><img id="service-icons" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/toolbox.svg"><br><br><b id="icon-heading">CONSTRUCTION</b><br>
+                    <p class="icons-para">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Suspendisse varius enim in <br> eros elementum tristique.</p><br>
+                     <a href="#"><B class="icon-button">LEARN MORE</B></a></div>
+                <div><img id="service-icons" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/paint-roller.svg"><br><br><b id="icon-heading">FINANCIAL RESULTS</b><br>
+                    <p class="icons-para">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Suspendisse varius enim in <br> eros elementum tristique.</p><br> 
+                    <a href="#"><B class="icon-button">LEARN MORE</B></a></div>
+
+            </div>
+        </div>
+        <br>
+        <!-- About Section Starts Here -->
+        <div class="about-conatiner col-4 col-s-4" >
+            <div class="about-section">
+                <img id="about-img" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/serv-1.jpg"><h1 id="about-transparent-text">ABOUT</h1> 
+                <div class="about-contents"><B id="about-sub-text">WHO WE ARE</B> 
+                    <p id="about-para">Based on collective work and shared knowledge, Nuuk aims to favor <br>
+                         dialogue and debate, to transform individual knowledge into increased<br>
+                          creative potential.</p><br><br>
+                          <p id="about-para-2">Our studio is a architecture practice based in NY and Paris. Today, it includes<br> 
+                            150 architects, urban planners, landscape and interior designers of 25<br> 
+                            different nationalities. The company principle of Architecture-Studio is the <br>
+                            collective conception. From the very beginning, the practice has believed in<br> 
+                            the virtues of exchange, crossing ideas, common effort, shred knowledge.</p>
+                            <a href="#"><B class="about-button">MEET THE TEAM</B></a>
+                </div>
+            </div>
+        </div><br>
+        <!-- Number Section Starts Here -->
+         <div class="number-container col-5 col-s-5">
+            <div class="number-section">
+                <div><h1>170</h1><P class="number-para">Employer with over 10<br>
+                     years of experience</P></div>
+                <div><h1>10</h1><p class="number-para">Years experience in <br>
+                    construction industries</p></div>
+                <div><h1>690</h1><div></div><p class="number-para">Residential premises <br>
+                    completed in 2019</p></div>
+                <div><h1>7.1</h1><p class="number-para">Milion dollar value on<br>
+                    investments</p></div>
+            </div>
+         </div>
+         <!-- Projects section starts here -->
+          <div class="project-main-container col-6 col-s-6">
+              <div class="heading">
+                    <div class="project-text col-7 col-s-7">
+                        <div class="blog-text">
+                        <h1 id="transparent-text">PROJECTS</h1></div><B id="project-sub-text">OUR WORK</B> <a href="#"><B class="works-button">VIEW ALL WORKS</B></a>
+                    </div>
+               </div>
+               <div class="project-container">
+                  <div class="project-img-section">
+                    <div id="project-img-container"> <img class="project-img" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-1.jpg"></div>
+                     <div id="project-button-container"><button class="view-project-button" type="button"><b>VIEW PROJECT</b></button></div>
+                    <div id="project-img-container"> <img class="project-img" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-4.jpg"> </div>
+                    <div id="project-button-container"><button class="view-project-button" type="button"><b>VIEW PROJECT</b></button></div>
+                    <div id="project-img-container"> <img class="project-img" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-3.jpg"></div>
+                    <div id="project-button-container"><button class="view-project-button" type="button"><b>VIEW PROJECT</b></button></div>
+                    <div id="project-img-container"> <img class="project-img" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-6.jpg"></div>
+                    <div id="project-button-container"><button class="view-project-button" type="button"><b>VIEW PROJECT</b></button></div>
+                    <div id="project-img-container"> <img class="project-img" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-5.jpg"></div>
+                    <div id="project-button-container"><button class="view-project-button" type="button"><b>VIEW PROJECT</b></button></div>
+                    <div id="project-img-container"> <img class="project-img" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-2.jpg"></div>
+                    <div id="project-button-container"><button class="view-project-button" type="button"><b>VIEW PROJECT</b></button></div>
+                  </div>
+               </div>
+               <div class="project-transparent-container col-8 col-s-8">
+                  <div class="project-transparent-section">
+                      <div id="transparent-para-text"><p id="transparent-main-text">LET'S MAKE SOMETHING GREAT TOGETHER</p>
+                        <p id="transparent-sub-text">Get in touch with us and send some basic info for a quick quote.</p> 
+                        <a href="#"><B class="transparent-button">GET FREE QUOTE</B></a>
+                      </div>
+                  </div>
+               </div>
+               <div class="headin ">
+                  <div class="team-text col-9 col-s-9">
+                      <div class="blog-text">
+                      <h1 id="transparent-text">TEAMS</h1></div><B id="team-sub-text">PROFESSIONALS</B> <a href="#"><B class="team-button">ABOUT US</B></a>
+                  </div>
+              </div>
+              <div class="team-img-container col-10 col-s-10">
+                <div class="team-img-section">
+                   <div id="team-img-background">  <div> <img id="team-img" src="https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.
+                        webp?b=1&s=170667a&w=0&k=20&c=KDO6yy-rASso-b0tI6Euv2um6GxXJ6QoQr0qioETwJE="><h1 id="team-name">PHILIP BROWER</h1> <p id="team-position">Managing Director</p></div></div>
+                    <div id="team-img-background"> <div> <img id="team-img" src="https://media.istockphoto.com/id/1153206642/photo/confident-ginger-businessman-smiling-for-camera.
+                        jpg?s=612x612&w=0&k=20&c=xxN9v6-zB50n0_LW1Mi7ZiP5ilKH0Zh9sjI8G5S260c="><h1 id="team-name">JOHN WICK</h1><p id="team-position">Managing Director</p></div></div>
+                    <div id="team-img-background"> <div> <img id="team-img" src="https://media.istockphoto.com/id/1135476604/photo/portrait-of-handsome-young-man-with-crossed-arms.
+                        jpg?s=612x612&w=0&k=20&c=AffDDGYHeYW_394lHCjsmbUxhbpxza_ex8A-OsDM2GY="><h1 id="team-name">JIMMY MCGILL</h1><p id="team-position">Managing Director</p></div></div>
+                    <div id="team-img-background"> <div> <img id="team-img" src="https://media.istockphoto.com/id/1317784594/photo/headshot-of-mature-50-years-old-asian-business-woman-on-grey-background.
+                        jpg?s=612x612&w=0&k=20&c=eOmdf5BbEG75m9MBSTvhjA5uMDmUj0zDtXd3lv0nm8U="><h1 id="team-name">SARA CONNOR</h1><p id="team-position">Managing Director</p></div></div>
+
+                </div>
+              </div>
+               
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="logo-container col-11 col-s-11">
+        <div class="logo-section">
+            <div id="logo-list"><b>TRUSTED BY TOP COMPANIES</b></div>
+            <div class="logo"><b>LOGO-1</b></div>
+            <div class="logo"><b>LOGO-2</b></div>
+            <div class="logo"><b>LOGO-3</b></div>
+            <div class="logo"><b>LOGO-4</b></div>
+            <div class="logo"><b>LOGO-5</b></div>
+            
+            
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Footer Starts Here -->
+    <footer>
+        <div class="footer-container col-12 col-s-12">
+            <div class="footer-section">
+                <!-- About section -->
+               <div>
+                  <B>ABOUT NUUK <input class="line"type="line"></B>
+                  <div class="contents">
+                      <P class="footer-para">
+                         Based on collective work and shared <BR>
+                         knowledge, Nuuk aims to favor dialogue and<BR>
+                         debate, to transform individual knowledge into<BR>
+                         increased creative potential.
+                      </P>
+                      <B class="selection-hover">FIND ON MAP</B><BR>
+                    </div>    
+                  <button  class="box"type="button"><b>NUUK</b></button>
+               </div>
+               <!-- service section -->
+               <div>
+                  <b>SERVICES  <input class="line"type="line"> </b>
+                  <BR>
+                    <BR>
+                  <div class="contents">
+                     <b class="selection-hover">FINANCIAL RESULTS</b><BR>
+                     <BR>
+                     <b class="selection-hover">CONSTRUCTION</b><BR>
+                     <BR>
+                     <b class="selection-hover">ARCHITECTURE </b><BR>
+                     <BR>
+                     <b class="selection-hover">RENOVATION</b>
+                  </div>
+                </div>
+                <!-- contact details -->
+                <div>
+                    <b>CONTACT US  <input class="line"type="line"></b><br>
+                  <div class="contents">
+                     <div id="contact-details"><img id="icons" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/phone.svg">
+                        <B id="sub">PHONE NUMBER</B></div><DIV id="sub-2">1-800-506-266</DIV><br>
+                     <div id="contact-details"><img id="icons"  src="https://nuuk-e3eaa.firebaseapp.com/assets/img/clock.svg"><B id="sub">OPENING TIMES</B></div> 
+                     <DIV id="sub-2">Mon - Sat 8:00 - 17:30, Sunday - Closed</DIV><br>
+                     <div id="contact-details"><img id="icons" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/mail.svg">
+                        <B id="sub">CONTACT</B></div><DIV id="sub-2">contact@nuuk.com</DIV><br>
+                  </div>
+                </div>
+           </div>
+        </div>
+
+    </footer>
+    
+</body>
+</html>
